@@ -23,4 +23,3 @@ Using stdin
 echo "10.10.10.0/24" | ipl
 ```
 
-gi
