@@ -34,9 +34,11 @@ func main() {
 	}else{
 		for {
 			_, err := fmt.Scanln(&input)
-			displayIps(input)
 			if err != nil {
 				break
+				
+			}else{
+				displayIps(input)
 			}
 		}
 	}
