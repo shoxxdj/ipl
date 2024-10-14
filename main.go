@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 	"strings"
-
+        "net"
 	"github.com/korylprince/ipnetgen"
 )
 
@@ -19,7 +19,10 @@ func displayIps(cidrInput string){
 			fmt.Println(ip)
 		}
 	}else{
-		fmt.Println(cidrInput)
+		ip := net.ParseIP(cidrInput)
+		if ip != nil {
+			fmt.Println(cidrInput)
+                }
 	}
 }
 
